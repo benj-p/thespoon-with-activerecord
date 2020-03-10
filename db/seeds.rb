@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Destroying all restaurants"
+
+Restaurant.destroy_all
+
+puts "Starting seed..."
+
+Restaurant.create(name: "Ben's pizza", address: "Singapore", chef: "Ben")
+Restaurant.create(name: "Alex's burger", address: "London", chef: "Alex")
+Restaurant.create(name: "Din Tai Fung", address: "Taipei", chef: "Din")
+
+puts "Finished seeding 👍"
